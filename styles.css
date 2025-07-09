@@ -1,0 +1,240 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa; /* Changed to a solid color for better readability */
+    margin: 0;
+    color: #333;
+    position: relative;
+}
+
+body.login-page {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    margin: 0;
+}
+
+.voting-background {
+    background-image: url('img%20OVS.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.voting-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); /* dark overlay for contrast */
+    z-index: -1;
+}
+
+body::before {
+    /* Removed to avoid overlay on all pages */
+}
+
+.voting-container {
+    margin: 50px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.voting-container header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #007bff; /* Ensured header color is consistent */
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0056b3;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Changed to a consistent green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.signup-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#signupButton {
+    background-color: #28a745;
+    margin-top: 10px;
+}
+
+#signupButton:hover {
+    background-color: #218838;
+}
+
+.voting-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.candidates-list {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.candidate {
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.candidate input[type="radio"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: #007bff;
+}
+
+.candidate label {
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.party-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid #ddd;
+}
+
+.candidate:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#submitVote {
+    margin-top: 20px;
+    background-color: #28a745; /* Ensured button color is consistent */
+}
+
+#submitVote:hover {
+    background-color: #218838;
+}
+
+/* New styles for logout popup and overlay */
+#logoutOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoutPopup {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    z-index: 9999;
+}
+
+#logoutPopup h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+#logoutPopup button {
+    width: auto;
+    padding: 10px 30px;
+    background-color: #dc3545; /* Red color for logout */
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logoutPopup button:hover {
+    background-color: #c82333;
+}
